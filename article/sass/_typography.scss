@@ -1,0 +1,14 @@
+@use "variables" as *;
+@use "responsive" as *;
+
+.main__heading {
+  font-size: 5.6rem;
+  line-height: 5.6rem;
+  font-weight: $fw-extra-bold;
+}
+
+@include respond(phone) {
+  .main__heading {
+    margin-bottom: 1.6rem;
+  }
+}

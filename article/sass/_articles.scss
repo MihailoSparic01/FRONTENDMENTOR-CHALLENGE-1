@@ -1,0 +1,49 @@
+@use "variables" as *;
+@use "responsive" as *;
+
+.articles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 4rem;
+  @include respond(phone) {
+    display: block;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2.4rem;
+
+    @include respond(phone) {
+      margin-bottom: 3.2rem;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  &__img {
+    max-width: 10rem;
+    height: auto;
+    @include respond(phone) {
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__number {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+    margin-bottom: 1.2rem;
+    color: $color-primary-red;
+    font-weight: $fw-bold;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: $fw-extra-bold;
+  }
+}

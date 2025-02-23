@@ -1,0 +1,32 @@
+@use "variables" as *;
+@use "responsive" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $main-ff;
+  background-color: $color-neutral-offwhite;
+  font-size: 1.5rem;
+  padding: 0 2.5rem;
+  position: relative;
+
+  @include respond(mobile) {
+    padding: 0 1.6rem;
+  }
+}
+
+.container {
+  max-width: 111rem;
+  margin: 0 auto;
+}
